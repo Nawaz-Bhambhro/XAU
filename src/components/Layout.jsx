@@ -821,7 +821,7 @@ export function SiteHeader({
     <header className="site-header">
       <div className="header-top">
         <div className="main-header cms-content-wrapper">
-          <DbIdentifier />
+          <DbLogoLink />
           <nav className="navigation-cross" aria-label="meta">
             <ul>
               {utilityLinks.map((link) => (
@@ -836,7 +836,7 @@ export function SiteHeader({
               ))}
             </ul>
           </nav>
-          <DbLogoLink />
+          <DbIdentifier />
         </div>
       </div>
 
