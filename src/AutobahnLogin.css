@@ -1,0 +1,379 @@
+/* Autobahn Authentication Gateway login */
+.abn-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f2f5 0%, #e8ebef 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+.abn-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.abn-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 18px 10px;
+}
+
+.abn-brand-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.abn-brand-link {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.abn-brand-image {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+
+.abn-fdic {
+  margin: 0;
+  max-width: 620px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #444;
+}
+
+.abn-header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.abn-group-link {
+  font-size: 11px;
+  color: #666;
+  text-decoration: none;
+}
+
+.abn-group-link:hover {
+  text-decoration: underline;
+}
+
+.abn-db-logo {
+  display: block;
+}
+
+.abn-db-logo-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: #0018a8;
+  position: relative;
+}
+
+.abn-db-logo-mark::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 22px;
+  height: 22px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: rotate(45deg);
+}
+
+.abn-top-stage {
+  line-height: 0;
+}
+
+.abn-stage-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.abn-action-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 12px;
+  background: linear-gradient(180deg, #d8dce3 0%, #c5cad3 100%);
+  border-top: 1px solid #b8bdc6;
+  border-bottom: 1px solid #b0b5be;
+}
+
+.abn-request-access {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: #0018a8;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.abn-request-access:hover {
+  background: #0024c8;
+}
+
+/* Main */
+.abn-main {
+  padding: 20px 18px 28px;
+}
+
+.abn-main-inner {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Form */
+.abn-form {
+  border-top: 1px solid #d0d0d0;
+}
+
+.abn-form-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.abn-form-row label {
+  font-size: 12px;
+  color: #333;
+}
+
+.abn-required {
+  color: #c00;
+}
+
+.abn-form-spacer {
+  display: block;
+}
+
+.abn-field-group {
+  display: flex;
+  align-items: center;
+}
+
+.abn-form-row input[type='text'],
+.abn-form-row input[type='password'],
+.abn-form-row select {
+  width: 100%;
+  max-width: 280px;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  font-size: 12px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.abn-form-row--checkbox {
+  border-bottom: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.abn-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+}
+
+.abn-checkbox-label input {
+  margin: 0;
+}
+
+.abn-help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 1px solid #7aa0c8;
+  border-radius: 50%;
+  background: #e8f0f8;
+  color: #003399;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.abn-password-group {
+  gap: 6px;
+  max-width: 280px;
+}
+
+.abn-password-group input {
+  flex: 1;
+  max-width: none;
+}
+
+.abn-key-btn {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border: 1px solid #999;
+  background: linear-gradient(180deg, #f5f5f5 0%, #e0e0e0 100%);
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+}
+
+.abn-form-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 16px;
+  padding-left: 142px;
+}
+
+.abn-btn {
+  padding: 5px 16px;
+  border: 1px solid #888;
+  background: linear-gradient(180deg, #f0f0f0 0%, #d8d8d8 100%);
+  font-size: 12px;
+  font-family: inherit;
+  color: #333;
+  cursor: pointer;
+}
+
+.abn-btn:hover {
+  background: linear-gradient(180deg, #f8f8f8 0%, #e4e4e4 100%);
+}
+
+/* Sidebar */
+.abn-sidebar {
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.abn-fraud-box {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+  background: #eef4fb;
+  border: 1px solid #b8cfe8;
+}
+
+.abn-fraud-icon {
+  flex-shrink: 0;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.abn-fraud-content h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #003399;
+}
+
+.abn-fraud-content p {
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.abn-fraud-content p:last-child {
+  margin-bottom: 0;
+}
+
+.abn-sidebar-links {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.abn-sidebar-links li {
+  margin-bottom: 4px;
+}
+
+.abn-sidebar-links a {
+  color: #003399;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.abn-sidebar-links a:hover {
+  text-decoration: underline;
+}
+
+.abn-warning {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Footer */
+.abn-footer {
+  padding: 12px 18px 18px;
+  border-top: 1px solid #d0d0d0;
+  background: #f8f8f8;
+}
+
+.abn-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.abn-footer-links a {
+  font-size: 11px;
+  color: #003399;
+  text-decoration: none;
+}
+
+.abn-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.abn-copyright {
+  margin: 0;
+  font-size: 10px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .abn-main-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .abn-form-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .abn-form-actions {
+    padding-left: 0;
+  }
+
+  .abn-header-top {
+    flex-direction: column;
+  }
+
+  .abn-header-meta {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

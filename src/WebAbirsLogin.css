@@ -1,0 +1,541 @@
+/* Web ABIRS – Authentication Gateway (Issuer Services) */
+.wa-page {
+  min-height: 100vh;
+  background: #e8edf3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+  padding: 12px 0 24px;
+}
+
+.wa-layout {
+  width: 994px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #c8d4df;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.wa-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 14px 6px;
+}
+
+.wa-brand-image {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.wa-header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.wa-group-link {
+  font-size: 11px;
+  color: #333;
+  text-decoration: none;
+}
+
+.wa-group-link:hover {
+  text-decoration: underline;
+}
+
+.wa-db-logo-img {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+/* Main navigation */
+.wa-main-nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 10px;
+  min-height: 54px;
+  background: linear-gradient(180deg, #d4e4f4 0%, #eef4fa 55%, #f8fbff 100%);
+  border-top: 1px solid #b8cfe0;
+  border-bottom: 1px solid #b0c8db;
+}
+
+.wa-nav-list {
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wa-nav-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.wa-nav-tab {
+  display: block;
+  padding: 7px 14px 5px;
+  font-size: 12px;
+  color: #003399;
+  background: linear-gradient(180deg, #e6e6e6 0%, #d2d2d2 100%);
+  border: 1px solid #b0b0b0;
+  border-bottom: none;
+  margin-right: 2px;
+}
+
+.wa-nav-tab--link {
+  text-decoration: none;
+}
+
+.wa-nav-item--active .wa-nav-tab {
+  background: linear-gradient(180deg, #fff 0%, #f5f9fd 100%);
+  border-color: #a8c4dc;
+  font-weight: 700;
+}
+
+.wa-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 6px;
+}
+
+.wa-subnav a {
+  padding: 2px 10px;
+  font-size: 11px;
+  color: #003399;
+  text-decoration: none;
+  border-right: 1px solid #c5d5e5;
+}
+
+.wa-subnav li:last-child a {
+  border-right: none;
+}
+
+.wa-subnav a.active,
+.wa-subnav a:hover {
+  text-decoration: underline;
+}
+
+.wa-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.wa-search input {
+  width: 128px;
+  padding: 3px 6px;
+  border: 1px solid #999;
+  font-size: 11px;
+  color: #666;
+}
+
+.wa-search button {
+  padding: 0;
+  border: 1px solid #999;
+  border-left: none;
+  background: linear-gradient(180deg, #f5f5f5 0%, #ddd 100%);
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wa-search button img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Breadcrumb */
+.wa-breadcrumb {
+  padding: 6px 14px;
+  font-size: 11px;
+  color: #333;
+  background: #eef4fa;
+  border-bottom: 1px solid #d0dde8;
+}
+
+.wa-breadcrumb-path {
+  margin-left: 4px;
+}
+
+.wa-breadcrumb-path strong {
+  color: #003399;
+  font-weight: 700;
+}
+
+.wa-breadcrumb-sep {
+  color: #666;
+  margin: 0 2px;
+}
+
+/* Three-column layout: 194 | 582 | 194 */
+.wa-columns {
+  display: flex;
+  align-items: stretch;
+  min-height: 400px;
+}
+
+.wa-left-nav {
+  flex: 0 0 194px;
+  width: 194px;
+  padding: 4px 0 20px;
+  border-right: 1px dotted #bbb;
+}
+
+.wa-left-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.wa-left-nav li + li a {
+  border-top: 2px dotted #999;
+}
+
+.wa-left-nav a {
+  display: block;
+  padding: 7px 0 5px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #000;
+  text-decoration: none;
+}
+
+.wa-left-nav a.active {
+  font-weight: 700;
+  color: #003399;
+}
+
+.wa-left-nav a:hover {
+  color: #003399;
+  text-decoration: underline;
+}
+
+/* Center login column */
+.wa-login {
+  flex: 0 0 582px;
+  width: 582px;
+}
+
+.wa-login-header {
+  padding: 12px 12px 8px;
+}
+
+.wa-login h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #003399;
+}
+
+.wa-form {
+  padding: 0 0 12px;
+}
+
+.wa-form-table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.wa-form-col {
+  display: table-cell;
+  vertical-align: top;
+  width: 290px;
+}
+
+.wa-form-col-fields {
+  padding-bottom: 40px;
+}
+
+.wa-mode-box {
+  background: #eaf1f7;
+  margin: 4px 5px;
+  padding: 8px 10px;
+  min-height: 250px;
+}
+
+.wa-mode-label {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: #333;
+}
+
+.wa-mode-label strong {
+  font-weight: 700;
+}
+
+.wa-select-wrap {
+  position: relative;
+  margin: 10px 0;
+  width: 193px;
+}
+
+.wa-select-wrap select {
+  width: 100%;
+  padding: 6px 28px 6px 8px;
+  border: 1px solid #64696e;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: inherit;
+  background: #fff;
+  appearance: none;
+}
+
+.wa-select-mark {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0098db;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 0 2px 2px 0;
+  pointer-events: none;
+}
+
+.wa-mode-help-wrap {
+  margin-top: 53px;
+  padding-top: 10px;
+  border-top: 2px dotted #999;
+}
+
+.wa-mode-help {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #666;
+}
+
+.wa-fields-box {
+  padding: 5px;
+  margin: 4px 5px;
+}
+
+.wa-field-placeholder {
+  height: 43px;
+  margin-bottom: 4px;
+}
+
+.wa-field-placeholder input {
+  width: 260px;
+  height: 31px;
+  padding: 0 5px;
+  border: 1px solid #999;
+  font-size: 12px;
+  font-family: inherit;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.wa-field-placeholder input::placeholder {
+  color: #999;
+  font-size: 11px;
+}
+
+.wa-field-placeholder--password {
+  margin-top: 10px;
+}
+
+.wa-remember-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 35px;
+  padding-top: 5px;
+}
+
+.wa-remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.wa-remember input {
+  margin: 0;
+}
+
+.wa-hint-link img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.wa-note {
+  margin: 8px 0;
+  font-size: 12px;
+  color: #333;
+}
+
+.wa-warning {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.wa-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0 10px 0 0;
+}
+
+.wa-btn {
+  min-width: 85px;
+  height: 33px;
+  padding: 0 14px;
+  font-size: 12px;
+  font-family: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #f5f5f5 0%, #ddd 100%);
+}
+
+.wa-btn-clear {
+  border: 1px solid #e00034;
+  color: #333;
+}
+
+.wa-btn-clear:hover {
+  background: linear-gradient(180deg, #fff 0%, #f0e8eb 100%);
+}
+
+.wa-btn-submit {
+  border: 1px solid #7ab800;
+  color: #333;
+}
+
+.wa-btn-submit:hover {
+  background: linear-gradient(180deg, #f0faf0 0%, #d4edd4 100%);
+}
+
+/* Right panel */
+.wa-right-panel {
+  flex: 0 0 194px;
+  width: 194px;
+  padding: 14px 10px;
+  border-left: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.wa-updates-box h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003399;
+}
+
+.wa-updates-box h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003399;
+}
+
+.wa-updates-box p {
+  margin: 0 0 8px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.wa-updates-box a {
+  color: #003399;
+}
+
+/* Footer */
+.wa-footer {
+  padding: 10px 14px 14px;
+  border-top: 1px solid #ccc;
+  background: #f5f5f5;
+}
+
+.wa-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.wa-footer-links a {
+  font-size: 11px;
+  color: #003399;
+  text-decoration: none;
+}
+
+.wa-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.wa-footer-date,
+.wa-copyright {
+  margin: 0;
+  font-size: 10px;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .wa-layout {
+    width: 100%;
+    max-width: 994px;
+  }
+
+  .wa-columns {
+    flex-direction: column;
+  }
+
+  .wa-left-nav,
+  .wa-login,
+  .wa-right-panel {
+    flex: none;
+    width: 100%;
+  }
+
+  .wa-left-nav {
+    border-right: none;
+    border-bottom: 1px dotted #bbb;
+  }
+
+  .wa-right-panel {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .wa-form-table,
+  .wa-form-col {
+    display: block;
+    width: 100%;
+  }
+
+  .wa-form-col-fields {
+    padding-bottom: 0;
+  }
+
+  .wa-field-placeholder input {
+    width: 100%;
+    max-width: 320px;
+  }
+}

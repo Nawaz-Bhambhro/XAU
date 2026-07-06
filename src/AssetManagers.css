@@ -1,0 +1,606 @@
+/* Asset managers – corporates.db.com/clients/asset-managers */
+
+.am-page {
+  padding-bottom: 0;
+}
+
+/* Hero stage */
+.am-hero {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.am-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.am-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.am-hero-content h1 {
+  margin: 0;
+  max-width: 75%;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--db-white);
+}
+
+/* Breadcrumb & content */
+.am-content {
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+
+.am-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  color: #666;
+}
+
+.am-breadcrumb-label {
+  margin-right: 2px;
+}
+
+.am-breadcrumb a {
+  color: var(--db-blue);
+  text-decoration: none;
+}
+
+.am-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.am-breadcrumb-current {
+  color: #333;
+}
+
+.am-intro {
+  margin: 0 0 40px;
+  max-width: 100%;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #222;
+}
+
+.am-section-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+}
+
+.am-body {
+  margin: 0 0 36px;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.am-sector-heading {
+  margin-bottom: 0;
+}
+
+/* Sector cards */
+.am-sectors {
+  padding: 24px 0 48px;
+}
+
+.am-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.am-sector-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 280px;
+  padding: 36px 40px 40px;
+}
+
+.am-sector-card-neutral {
+  background: #e8e8e8;
+}
+
+.am-sector-card-light {
+  background: #f2f2f2;
+}
+
+.am-sector-card h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.am-sector-card h3 a {
+  color: #222;
+  text-decoration: none;
+}
+
+.am-sector-card h3 a:hover {
+  color: var(--db-blue);
+}
+
+.am-sector-card p {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.am-sector-card .corp-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Promo banners */
+.am-promos {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.am-promo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 300px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.am-promo > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
+.am-promo-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.am-promo-overlay-white {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.92) 38%,
+    rgba(255, 255, 255, 0.4) 62%,
+    transparent 100%
+  );
+}
+
+.am-promo-overlay-blue {
+  background: linear-gradient(
+    90deg,
+    #1e2a78 0%,
+    rgba(30, 42, 120, 0.88) 35%,
+    rgba(30, 42, 120, 0.3) 60%,
+    transparent 100%
+  );
+}
+
+.am-promo-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  min-height: 300px;
+  max-width: 52%;
+  padding: 40px 0;
+}
+
+.am-promo-content h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--db-blue);
+}
+
+.am-promo-why .am-promo-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.am-promo-content-newsletter h2 {
+  color: var(--db-white);
+}
+
+.am-promo-newsletter {
+  min-height: 360px;
+}
+
+.am-promo-newsletter .am-promo-content {
+  min-height: 360px;
+  max-width: 58%;
+}
+
+/* Alternative asset managers hero accent */
+.am-hero-alt .am-hero-green-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 22%;
+  background: linear-gradient(
+    to right,
+    rgba(20, 60, 45, 0.88) 0%,
+    rgba(20, 60, 45, 0.55) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.am-explore-heading {
+  margin-bottom: 8px;
+}
+
+/* Solution banner cards – separate blocks with white gaps */
+.am-solutions {
+  padding: 4px 0 24px;
+  background: #fff;
+}
+
+.am-solutions-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.am-solution-block {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 300px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.am-solution-block > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.am-solution-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Live-site style: #1e2a78 → transparent, varied per block */
+
+/* Cash management – standard DB navy */
+.am-solution-overlay-cash {
+  background: linear-gradient(
+    90deg,
+    #1e2a78 0%,
+    #1e2a78 32%,
+    rgba(30, 42, 120, 0.55) 52%,
+    transparent 72%
+  );
+}
+
+/* Corporate trust – muted blue-grey, white text */
+.am-solution-overlay-trust {
+  background: linear-gradient(
+    90deg,
+    #2c3568 0%,
+    #3a4578 28%,
+    rgba(58, 69, 120, 0.5) 48%,
+    transparent 72%
+  );
+}
+
+/* Custody – navy fades into warm golden photo */
+.am-solution-overlay-custody {
+  background: linear-gradient(
+    90deg,
+    #1e2a78 0%,
+    rgba(30, 42, 120, 0.75) 22%,
+    rgba(30, 42, 120, 0.25) 38%,
+    transparent 58%
+  );
+}
+
+/* Fund services – rich navy blue */
+.am-solution-overlay-fund {
+  background: linear-gradient(
+    90deg,
+    #1e2a78 0%,
+    #1e2a78 30%,
+    rgba(30, 42, 120, 0.5) 52%,
+    transparent 74%
+  );
+}
+
+/* dbSelect – very dark navy */
+.am-solution-overlay-dbselect {
+  background: linear-gradient(
+    90deg,
+    #0f1235 0%,
+    rgba(15, 18, 53, 0.85) 30%,
+    rgba(15, 18, 53, 0.35) 50%,
+    transparent 70%
+  );
+}
+
+.am-solution-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  min-height: 300px;
+  padding: 36px 40px;
+  box-sizing: border-box;
+}
+
+.am-solution-inner-narrow {
+  max-width: 46%;
+}
+
+.am-solution-inner-wide {
+  max-width: 52%;
+}
+
+.am-solution-eyebrow {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.am-solution-inner h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--db-white);
+}
+
+.am-solution-inner p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.am-solution-inner-dbselect .am-solution-eyebrow {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+.am-solution-inner .corp-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* Newsletter block – contained like solution cards */
+.am-promos-stack {
+  padding-bottom: 48px;
+}
+
+.am-promo-block {
+  min-height: 300px;
+  max-width: 58%;
+}
+
+.am-promo-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  min-height: 300px;
+  max-width: 75%;
+  padding: 36px 40px;
+  box-sizing: border-box;
+}
+
+.am-promo-inner-newsletter h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--db-white);
+}
+
+/* Financial sponsors hero – blue/purple tint */
+.am-hero-fs .am-hero-fs-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 42, 120, 0.55) 0%,
+    rgba(80, 60, 140, 0.35) 45%,
+    rgba(30, 42, 120, 0.15) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.am-hero-fs .am-hero-content {
+  z-index: 2;
+}
+
+/* Why choose – white panel, dark text */
+.am-solution-overlay-why {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.94) 34%,
+    rgba(255, 255, 255, 0.55) 54%,
+    transparent 72%
+  );
+}
+
+.am-solution-inner-why h3 {
+  color: #1e2a78;
+}
+
+.am-solution-inner-why p {
+  color: #333;
+}
+
+/* Financial sponsors service list */
+.am-body-tight {
+  margin-bottom: 12px;
+}
+
+.fs-service-list {
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.fs-service-list li {
+  margin-bottom: 8px;
+}
+
+.fs-service-list a {
+  font-size: 16px;
+  color: var(--db-blue);
+  text-decoration: none;
+}
+
+.fs-service-list a:hover {
+  text-decoration: underline;
+}
+
+.bd-challenge-item {
+  margin: 0 0 24px;
+}
+
+.bd-challenge-item h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #222;
+}
+
+.bd-challenge-item p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.lf-practice-heading {
+  margin-bottom: 20px;
+}
+
+.lf-practice-table-wrap {
+  margin: 0 0 40px;
+  overflow-x: auto;
+}
+
+.lf-practice-table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .am-hero-content h1 {
+    max-width: 100%;
+  }
+
+  .am-sectors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .am-promo-content,
+  .am-promo-newsletter .am-promo-content {
+    max-width: 100%;
+    min-height: 260px;
+    padding: 32px 0;
+  }
+
+  .am-promo {
+    min-height: 260px;
+  }
+
+  .am-promo-newsletter {
+    min-height: 300px;
+  }
+
+  .am-solution-inner-narrow,
+  .am-solution-inner-wide {
+    max-width: 100%;
+    min-height: 260px;
+    padding: 32px 28px;
+  }
+
+  .am-solution-block {
+    min-height: 260px;
+  }
+
+  .am-promo-inner {
+    max-width: 100%;
+    min-height: 280px;
+    padding: 32px 28px;
+  }
+
+  .am-promo-block {
+    max-width: 100%;
+    min-height: 280px;
+  }
+
+  .am-hero-alt .am-hero-green-bar {
+    width: 35%;
+  }
+}
+
+@media (max-width: 600px) {
+  .am-sector-card {
+    padding: 28px 24px;
+    min-height: 0;
+  }
+
+  .am-intro {
+    font-size: 16px;
+  }
+
+  .am-promo-content h2 {
+    font-size: 22px;
+  }
+}

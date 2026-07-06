@@ -1,0 +1,505 @@
+/* DWS Asset Management solutions */
+.dws-site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #333;
+  font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.dws-header {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+.dws-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  min-height: 56px;
+}
+
+.dws-logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.dws-main-nav {
+  flex: 1;
+}
+
+.dws-main-nav ul {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dws-main-nav a {
+  color: #fff;
+  font-size: 0.9375rem;
+  padding: 1rem 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+.dws-main-nav a:hover,
+.dws-main-nav a.active {
+  border-bottom-color: #fff;
+}
+
+.dws-header-utils {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dws-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Security banner */
+.dws-security-banner {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.dws-security-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+.dws-security-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0066cc;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.dws-security-text strong {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+}
+
+.dws-security-text p {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #555;
+}
+
+.dws-security-toggle {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  color: #666;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Main */
+.dws-main {
+  flex: 1;
+}
+
+/* Hero */
+.dws-hero {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.dws-hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 120px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(255, 255, 255, 0.15) 8px,
+    rgba(255, 255, 255, 0.15) 9px
+  );
+  background-color: rgba(60, 60, 60, 0.5);
+}
+
+.dws-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dws-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, transparent 55%);
+  z-index: 1;
+}
+
+.dws-hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  min-height: 340px;
+}
+
+.dws-hero-box {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 28px 36px;
+  max-width: 420px;
+}
+
+.dws-hero-box h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+}
+
+/* Toolbar */
+.dws-page-toolbar {
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.dws-page-toolbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 24px;
+}
+
+.dws-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: #666;
+}
+
+.dws-breadcrumb a:hover {
+  color: #00838f;
+}
+
+.dws-toolbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.dws-toolbar-actions button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+/* Content */
+.dws-content {
+  padding: 40px 0 64px;
+}
+
+.dws-content-inner {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.dws-section-title {
+  margin: 0 0 24px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.dws-intro {
+  margin-bottom: 40px;
+}
+
+.dws-intro p {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #333;
+}
+
+/* Feature block */
+.dws-feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.dws-feature-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 48px;
+  background: #4a4a4a;
+  color: #fff;
+}
+
+.dws-feature-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.dws-feature-text p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.dws-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 10px 24px;
+  border: 2px solid #00838f;
+  border-radius: 24px;
+  background: transparent;
+  color: #00838f;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dws-btn-outline:hover {
+  background: #00838f;
+  color: #fff;
+}
+
+.dws-feature-media {
+  overflow: hidden;
+  background: #eee;
+}
+
+.dws-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Footer */
+.dws-footer {
+  margin-top: auto;
+}
+
+.dws-footer-top {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+.dws-footer-top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  font-size: 0.8125rem;
+}
+
+.dws-footer-locale {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.dws-footer-top-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.dws-footer-top-links a {
+  color: #fff;
+}
+
+.dws-footer-social {
+  display: flex;
+  gap: 8px;
+}
+
+.dws-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.dws-footer-main {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.dws-footer-main-inner {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.dws-footer-logo-img {
+  height: 36px;
+  width: auto;
+  filter: invert(1);
+}
+
+.dws-footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.dws-footer-col h3 {
+  margin: 0 0 12px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.dws-footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dws-footer-col li {
+  margin-bottom: 6px;
+}
+
+.dws-footer-col a {
+  font-size: 0.875rem;
+  color: #00838f;
+}
+
+.dws-footer-col a:hover {
+  text-decoration: underline;
+}
+
+.dws-footer-legal {
+  background: #f5f5f5;
+}
+
+.dws-footer-legal-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+.dws-footer-legal a {
+  font-size: 0.8125rem;
+  color: #00838f;
+}
+
+@media (max-width: 900px) {
+  .dws-header-inner {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .dws-main-nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .dws-feature-block {
+    grid-template-columns: 1fr;
+  }
+
+  .dws-feature-media {
+    min-height: 240px;
+  }
+
+  .dws-footer-main-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .dws-footer-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dws-hero-content {
+    padding: 32px 16px;
+    min-height: 280px;
+  }
+
+  .dws-feature-text {
+    padding: 28px 24px;
+  }
+
+  .dws-footer-columns {
+    grid-template-columns: 1fr;
+  }
+}

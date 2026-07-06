@@ -1,0 +1,132 @@
+/* Mobile services – matched to db.com/what-we-do/products-and-services/mobile-services */
+
+.ms-page {
+  padding-bottom: 64px;
+}
+
+.ms-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 20px 0 28px;
+  font-size: 13px;
+  color: var(--db-text-muted);
+}
+
+.ms-breadcrumb a {
+  color: var(--db-blue);
+  text-decoration: none;
+}
+
+.ms-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.ms-breadcrumb-current {
+  color: var(--db-text);
+}
+
+.ms-title {
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #16184e;
+  margin: 0 0 2rem;
+}
+
+.ms-hero {
+  padding: 0 0 24px;
+}
+
+.ms-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.ms-media {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ms-image {
+  width: 100%;
+  height: auto;
+  max-width: 320px;
+  display: block;
+  border-radius: 2px;
+}
+
+.ms-heading {
+  font-size: 1.625rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  color: #16184e;
+  margin: 0 0 12px;
+}
+
+.ms-text {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--db-text);
+  max-width: 560px;
+}
+
+.ms-badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ms-badge {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  width: 120px;
+  height: 34px;
+  border-radius: 3px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.ms-badge-top {
+  font-size: 9px;
+  opacity: 0.9;
+}
+
+.ms-badge-bottom {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ms-badge:hover {
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .ms-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ms-image {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 700px) {
+  .ms-title {
+    font-size: 1.813rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+

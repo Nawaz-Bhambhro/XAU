@@ -1,0 +1,273 @@
+/* Investor Relations page – matched to investor-relations.db.com */
+
+.ir-page {
+  padding-bottom: 0;
+}
+
+/* Hero */
+.ir-hero {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.ir-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.ir-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 42, 120, 0.35) 0%,
+    rgba(30, 42, 120, 0.15) 50%,
+    transparent 100%
+  );
+}
+
+.ir-hero-content {
+  position: relative;
+  z-index: 1;
+  height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.ir-hero-title {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--db-white);
+  line-height: 1.15;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* News + stock */
+.ir-news-stock {
+  padding: 40px 0 48px;
+}
+
+.ir-news-stock-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.ir-news-list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.ir-news-item {
+  display: block;
+  text-decoration: none;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--db-border-light);
+}
+
+.ir-news-item:first-child {
+  padding-top: 0;
+}
+
+.ir-news-meta {
+  display: block;
+  font-size: 13px;
+  color: var(--db-text-muted);
+  margin-bottom: 8px;
+}
+
+.ir-news-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.35;
+}
+
+.ir-news-item:hover .ir-news-title {
+  color: var(--db-blue);
+  text-decoration: underline;
+}
+
+.ir-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.ir-btn-primary {
+  background: var(--db-blue);
+  color: var(--db-white);
+}
+
+.ir-btn-primary:hover {
+  background: var(--db-blue-dark);
+}
+
+.ir-stock-box {
+  background: #eef0f3;
+  padding: 28px 24px;
+  color: var(--db-blue);
+}
+
+.ir-stock-box h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.ir-stock-box .price-row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.ir-stock-box .price-value {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.ir-stock-box .price-unit {
+  font-size: 16px;
+  padding-top: 12px;
+}
+
+.ir-stock-box .price-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 14px;
+  font-size: 14px;
+}
+
+.ir-stock-box .price-arrow {
+  font-size: 10px;
+}
+
+.ir-stock-box .price-meta {
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+/* 3x3 grid */
+.ir-grid-section {
+  padding-bottom: 56px;
+}
+
+.ir-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ir-grid-card {
+  background: var(--db-blue);
+  color: var(--db-white);
+  padding: 28px 24px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.ir-grid-card h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.ir-card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.ir-card-events {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.ir-card-event {
+  margin-bottom: 16px;
+}
+
+.ir-card-event h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.ir-card-event p {
+  font-size: 14px;
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+.ir-card-cta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 8px 16px;
+  background: var(--db-white);
+  color: var(--db-blue);
+  font-size: 14px;
+}
+
+/* IR footer reuses careers-social styles */
+.ir-footer .careers-social {
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .ir-news-stock-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ir-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .ir-hero {
+    height: 220px;
+  }
+
+  .ir-hero-content {
+    height: 220px;
+  }
+
+  .ir-hero-title {
+    font-size: 36px;
+  }
+
+  .ir-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ir-hero-title {
+    font-size: 28px;
+  }
+
+  .ir-stock-box .price-value {
+    font-size: 40px;
+  }
+}

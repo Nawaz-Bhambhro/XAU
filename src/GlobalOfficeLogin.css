@@ -1,0 +1,400 @@
+/* Global Office – Authentication Gateway login */
+.go-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e8edf3 0%, #dfe5ec 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+
+.go-layout {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.go-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 16px 8px;
+}
+
+.go-brand-image {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+
+.go-header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.go-group-link {
+  font-size: 11px;
+  color: #666;
+  text-decoration: none;
+}
+
+.go-group-link:hover {
+  text-decoration: underline;
+}
+
+.go-db-logo-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: #0018a8;
+  position: relative;
+}
+
+.go-db-logo-mark::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 22px;
+  height: 22px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* Main nav */
+.go-main-nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 12px;
+  min-height: 52px;
+  background: linear-gradient(180deg, #d4e4f4 0%, #eef4fa 55%, #f8fbff 100%);
+  border-top: 1px solid #b8cfe0;
+  border-bottom: 1px solid #b0c8db;
+}
+
+.go-nav-list {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.go-nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.go-nav-tab {
+  display: block;
+  padding: 8px 14px 6px;
+  font-size: 12px;
+  color: #003399;
+  background: linear-gradient(180deg, #f0f6fc 0%, #dceaf6 100%);
+  border: 1px solid #a8c4dc;
+  border-bottom: none;
+  margin-right: 2px;
+}
+
+.go-nav-tab--link {
+  text-decoration: none;
+}
+
+.go-nav-item--active .go-nav-tab {
+  background: linear-gradient(180deg, #fff 0%, #f5f9fd 100%);
+  font-weight: 700;
+}
+
+.go-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 6px;
+}
+
+.go-subnav a {
+  padding: 2px 10px;
+  font-size: 11px;
+  color: #003399;
+  text-decoration: none;
+  border-right: 1px solid #c5d5e5;
+}
+
+.go-subnav li:last-child a {
+  border-right: none;
+}
+
+.go-subnav a.active,
+.go-subnav a:hover {
+  text-decoration: underline;
+}
+
+.go-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.go-search input {
+  width: 130px;
+  padding: 3px 6px;
+  border: 1px solid #999;
+  font-size: 11px;
+  color: #666;
+}
+
+.go-search button {
+  padding: 3px 8px;
+  border: 1px solid #999;
+  border-left: none;
+  background: linear-gradient(180deg, #f5f5f5 0%, #ddd 100%);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Breadcrumb */
+.go-breadcrumb {
+  padding: 6px 16px;
+  font-size: 11px;
+  color: #333;
+  background: #eef4fa;
+  border-bottom: 1px solid #d0dde8;
+}
+
+.go-breadcrumb-path {
+  margin-left: 4px;
+}
+
+.go-breadcrumb-path strong {
+  color: #003399;
+  font-weight: 700;
+}
+
+.go-breadcrumb-sep {
+  color: #666;
+  margin: 0 2px;
+}
+
+/* Main columns */
+.go-main {
+  padding: 0;
+}
+
+.go-columns {
+  display: grid;
+  grid-template-columns: 150px 1fr 200px;
+  min-height: 380px;
+}
+
+/* Left nav */
+.go-left-nav {
+  padding: 16px 0;
+  border-right: 1px dotted #bbb;
+}
+
+.go-left-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.go-left-nav li {
+  margin-bottom: 2px;
+}
+
+.go-left-nav a {
+  display: block;
+  padding: 4px 0;
+  font-size: 12px;
+  color: #003399;
+  text-decoration: none;
+}
+
+.go-left-nav a.active {
+  font-weight: 700;
+}
+
+.go-left-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Login form */
+.go-login {
+  padding: 16px 20px 24px;
+}
+
+.go-login h1 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #003399;
+}
+
+.go-intro {
+  margin: 0 0 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.go-form-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.go-form-row label {
+  font-size: 12px;
+  text-align: right;
+  color: #333;
+}
+
+.go-form-row input {
+  max-width: 260px;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  font-size: 12px;
+  font-family: inherit;
+}
+
+.go-form-actions {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0 12px 98px;
+}
+
+.go-btn {
+  padding: 4px 14px;
+  border: 1px solid #888;
+  background: linear-gradient(180deg, #f0f0f0 0%, #d8d8d8 100%);
+  font-size: 12px;
+  font-family: inherit;
+  color: #333;
+  cursor: pointer;
+}
+
+.go-btn:hover {
+  background: linear-gradient(180deg, #f8f8f8 0%, #e4e4e4 100%);
+}
+
+.go-note {
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: #333;
+}
+
+.go-warning {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #333;
+}
+
+/* Right panel */
+.go-right-panel {
+  padding: 16px 14px;
+  border-left: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.go-updates-box h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003399;
+}
+
+.go-updates-box h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #003399;
+}
+
+.go-updates-box p {
+  margin: 0 0 8px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.go-updates-box a {
+  color: #003399;
+}
+
+/* Footer */
+.go-footer {
+  padding: 10px 16px 14px;
+  border-top: 1px solid #ccc;
+  background: #f5f5f5;
+}
+
+.go-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.go-footer-links a {
+  font-size: 11px;
+  color: #003399;
+  text-decoration: none;
+}
+
+.go-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.go-footer-date,
+.go-copyright {
+  margin: 0;
+  font-size: 10px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .go-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .go-left-nav {
+    border-right: none;
+    border-bottom: 1px dotted #bbb;
+  }
+
+  .go-right-panel {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .go-main-nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 8px;
+  }
+
+  .go-form-actions {
+    margin-left: 0;
+  }
+
+  .go-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .go-form-row label {
+    text-align: left;
+  }
+}
